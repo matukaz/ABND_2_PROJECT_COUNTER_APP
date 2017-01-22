@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.teddydev.abnd_2_project_counter_app.MainActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:onClick="resetAll"
+        android:text="@string/reset"
+        android:background="@color/colorResetButton"/>
+
+    <LinearLayout
+        android:id="@+id/teamScoreView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:textColor="@color/colorTeamA"
+                style="@style/teamTextView"
+                android:text="@string/team_a" />
+            <TextView
+                android:id="@+id/team_a_score"
+                style="@style/scoreTextView"
+                android:text="@string/zero" />
+            <Button
+                android:id="@+id/scoreForTeamAButton"
+                android:background="@color/colorTeamA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="addScoreForTeamA"
+                android:text="@string/score" />
+        </LinearLayout>
+
+        <View
+            style="@style/lineStyleVertical"
+            android:layout_marginTop="@dimen/verticalDividerTopMargin" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:textColor="@color/colorTeamB"
+                style="@style/teamTextView"
+                android:text="@string/team_b" />
+            <TextView
+                android:id="@+id/team_b_score"
+                style="@style/scoreTextView"
+                android:text="@string/zero" />
+            <Button
+                android:id="@+id/scoreForTeamBButton"
+                android:background="@color/colorTeamB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="addScoreForTeamB"
+                android:text="@string/score" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/horizontalDivider"
+        style="@style/lineStyleHorizontal"
+        android:layout_below="@id/teamScoreView"
+        android:layout_margin="@dimen/activity_vertical_margin" />
+
+    <LinearLayout
+        android:id="@+id/teamFaultView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/horizontalDivider">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/team_a_fault"
+                style="@style/faultTextView"
+                android:text="@string/zero" />
+            <Button
+                android:id="@+id/teamAFaultButton"
+                android:background="@color/colorTeamA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="addFaultForTeamA"
+                android:text="@string/foul" />
+        </LinearLayout>
+
+        <View style="@style/lineStyleVertical" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/team_b_fault"
+                style="@style/faultTextView"
+                android:text="@string/zero" />
+            <Button
+                android:id="@+id/teamBFaultButton"
+                android:background="@color/colorTeamB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="addFaultForTeamB"
+                android:text="@string/foul" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

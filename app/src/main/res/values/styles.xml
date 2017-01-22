@@ -1,0 +1,46 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Textviews -->
+    <style name="teamTextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/team_textview_padding</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="scoreTextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:padding">@dimen/score_textview_padding</item>
+        <item name="android:textSize">@dimen/score_textview_textsize</item>
+    </style>
+
+    <style name="faultTextView" parent="scoreTextView" />
+
+    <!-- Divider -->
+    <style name="lineStyle">
+        <item name="android:background">@android:color/black</item>
+    </style>
+
+    <style name="lineStyleHorizontal" parent="lineStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+
+    </style>
+
+    <style name="lineStyleVertical" parent="lineStyle">
+        <item name="android:layout_width">3dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+</resources>

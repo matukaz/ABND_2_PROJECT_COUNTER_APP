@@ -1,0 +1,13 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="score_textview_padding">6dp</dimen>
+    <dimen name="team_textview_padding">6dp</dimen>
+
+    <!-- text sizes-->
+    <dimen name="textview_default_font_size">16sp</dimen>
+    <dimen name="score_textview_textsize">56sp</dimen>
+    <dimen name="verticalDividerTopMargin">64dp</dimen>
+</resources>
